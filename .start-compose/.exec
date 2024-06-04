@@ -27,11 +27,10 @@ execute_action() {
 # Function to access Docker container shell
 access_container() {
     echo "Select a Docker container to access:"
-    echo "1. App Container"
+    echo "1. Nextcloud Container"
     echo "2. Database Container"
     echo "3. Adminer Container"
-    echo "4. Cron Container"
-    echo "5. Exit"
+    echo "4. Exit"
 
     read -rp "Enter your choice: " choice
 
@@ -47,7 +46,7 @@ access_container() {
 # Function to view Docker container logs
 view_container_logs() {
     echo "Select a Docker container to view logs:"
-    echo "1. App Container"
+    echo "1. Nextcloud Container"
     echo "2. Database Container"
     echo "3. Adminer Container"
     echo "4. Exit"
