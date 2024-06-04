@@ -1,6 +1,6 @@
 # Installation Process
 
-1. git clone first the repositories using this command ```git clone {path-of-repositories.git}```
+1. git clone first the repositories using this command ```git clone https://github.com/RKSA-Automation/Dockerized-Nextcloud-Server.git```
 2. Go to the Dockerized-Nextcloud folder
 3. Inside the folder run this command: ```chmod +x -R .start-compose```
 4. Then, you can now start execute the filename .compose. Go to the .start-compose folder first.
