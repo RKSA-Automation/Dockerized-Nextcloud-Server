@@ -1,3 +1,5 @@
+# Installation Process
+
 1. git clone first the repositories using this command " git clone {path-of-repositories.git}
 2. Go to the Dockerized-Nextcloud folder
 3. Inside the folder run this command: "chmod +x -R .start-compose
