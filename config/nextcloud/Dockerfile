@@ -1,14 +1,14 @@
 FROM nextcloud:latest
 
-#ENV TZ Asia/Manila
-#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV TZ Asia/Manila
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-#RUN apt-get update -y && \
+#RUN apt-get update -y &&
 #	apt-get upgrade -y &&\
 #	apt-get install --no-install-recommends smbclient libbz2-dev libsmbclient-dev -y && \
 #	pecl install smbclient && \
 #	docker-php-ext-install bz2 && \
- #   docker-php-ext-enable smbclient
+#	docker-php-ext-enable smbclient
 
 #RUN apt-get install --no-install-recommends -y cron && \
 #	crontab -u www-data -r && \
