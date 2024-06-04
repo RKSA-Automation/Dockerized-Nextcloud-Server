@@ -1,0 +1,4 @@
+2024-06-01 07:02:40+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.
+2024-06-01 07:02:40+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+2024-06-01 07:02:40+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.44-1.el7 started.
+'/var/lib/mysql/mysql.sock' -> '/var/run/mysqld/mysqld.sock'

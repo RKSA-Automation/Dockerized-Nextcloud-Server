@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  db:
+    image: nhs-mysql:1
+    build: .././config/mysql
+    container_name: db
+    hostname: db
+    restart: always
+    command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
+    volumes:
+      - .././persistent-folder/db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+
+  nextcloud:
+    build: .././config/nextcloud
+    image: nhs-nextcloud:1
+    container_name: nextcloud
+    restart: always
+    ports:
+      - 8001:80
+    links:
+      - db
+    volumes:
+      - .././persistent-folder/nextcloud:/var/www/html
+    environment:
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_HOST=db
+
+  adminer:
+    build: .././config/adminer
+    image: trg_mysql_adminer:1
+    container_name: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      ADMINER_DESIGN: pepa-linha
+
+
+volumes:
+  nextcloud:
+  db:
