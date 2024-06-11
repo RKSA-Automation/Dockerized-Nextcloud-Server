@@ -20,9 +20,9 @@ show_menu() {
 # Function to execute the selected action
 execute_action() {
     case "$1" in
-        1) docker-compose up -d && echo -e "${GREEN}Services started successfully.${NC}" ;;
-        2) docker-compose down -v && echo -e "${GREEN}Services stopped and removed.${NC}" ;;
-        3) docker-compose up --build -d && echo -e "${GREEN}Services rebuilt and started.${NC}" ;;
+        1) docker compose up -d && echo -e "${GREEN}Services started successfully.${NC}" ;;
+        2) docker compose down -v && echo -e "${GREEN}Services stopped and removed.${NC}" ;;
+        3) docker compose up --build -d && echo -e "${GREEN}Services rebuilt and started.${NC}" ;;
         4) docker ps -a && echo -e "${GREEN}Docker containers listed.${NC}" ;;
         5) ./.exec && echo -e "${GREEN}Executed exec.${NC}" ;;
         6) echo "Exiting..." ;;
